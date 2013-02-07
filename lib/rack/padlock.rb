@@ -40,7 +40,7 @@ module Rack
     
     class PadlockFile
       def self.write(file, violation)
-        ::File.open(file, 'a+') { |file| file.puts violation }
+        ::File.open(file, 'a+') { |file| file.puts violation.strip }
       end
     end
     

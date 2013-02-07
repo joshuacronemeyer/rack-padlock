@@ -49,7 +49,7 @@ class RackPadlockTest < MiniTest::Unit::TestCase
   
   class Rack::Padlock::PadlockFile
     @@last_output = ""
-    def self.write(data)
+    def self.write(file, data)
       @@last_output = data
     end
     
