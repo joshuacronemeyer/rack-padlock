@@ -21,7 +21,7 @@ module Rack
   
     def capture_violation(env)
       violation = env[POST_BODY].read
-      PadlockFile.write(violation)
+      PadlockFile.write(@options[:log_file], violation)
       [200, {}, []]
     end
   
@@ -39,8 +39,8 @@ module Rack
     end
     
     class PadlockFile
-      def self.write(violation)
-        ::File.open(@options[:log_file], 'a') { |file| file.write(violation) }
+      def self.write(file, violation)
+        ::File.open(file, 'a+') { |file| file.puts violation }
       end
     end
     
