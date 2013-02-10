@@ -1,6 +1,6 @@
 # rack-padlock
 
-A toolkit for rack applications that ensures _ALL_ content on a page is secure.  The browser padlock is pretty important for commercial web applications. Modern sites rely on so many third party services: analytics, video players, social media widgets.  With all these moving parts it's easy to end up with a broken padlock. Rack-Padlock will increase the visibility of padlock problems to your development team, and it's dead easy to use.
+A toolkit for rack applications that ensures _ALL_ content on a page adheres to your [Content Security Policy][W3C CSP spec].  The browser padlock is pretty important for commercial web applications. Modern sites rely on so many third party services: analytics, video players, social media widgets.  With all these moving parts it's easy to end up with a broken padlock. Rack-Padlock will increase the visibility of padlock problems to your development team, and it's dead easy to use.
 
 ## Prerequisites
 
@@ -58,4 +58,4 @@ Rack-Padlock starts your Rack app up with an SSL enabled webrick server.  It put
 
 ## References
 
-1. http://www.w3.org/TR/CSP/
+[W3C CSP spec]: http://www.w3.org/TR/CSP/
