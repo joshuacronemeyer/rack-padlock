@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
   s.test_files   = Dir.glob("{test}/**/*")
   s.add_dependency('rack')
   s.add_dependency('rainbow')
+  s.add_dependency('selenium-webdriver')
   s.add_development_dependency("bundler")
   s.add_development_dependency("rake")
   s.add_development_dependency("minitest")
