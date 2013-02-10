@@ -4,7 +4,7 @@ A toolkit for rack applications that ensures _ALL_ content on a page adheres to 
 
 ## Prerequisites
 
-All you need to have a rack based application! (Rails, Sinatra, Camping, etc...)
+All you need to have is a rack based application! (Rails, Sinatra, Camping, etc...)
 
 ## Setup
 
@@ -55,7 +55,5 @@ Have a look at a simple sinatra application that demonstrates rack-padlock at ht
 ## How it works
 
 Rack-Padlock starts your Rack app up with an SSL enabled webrick server.  It puts a custom middleware in front of your application that implements a CSP policy.  That policy requires the browser to notify us of any non SSL activity.  The custom middleware intercepts these notifications and logs them.  At the end of the run the rack-padlock test will either succeed or fail based on the presence of any policy violations.
-
-## References
 
 [W3C CSP spec]: http://www.w3.org/TR/CSP/
