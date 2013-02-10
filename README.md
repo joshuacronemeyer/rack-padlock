@@ -46,7 +46,7 @@ Once you've set things up simply run
 rake padlock
 ```
 
-This will run the padlock tests.  If any of your integration tests mix secure and insecure content, the padlock test will fail.
+This will run the padlock tests.  If any of your integration tests mix secure and insecure content, the padlock test will fail. ![alt text](http://dl.dropbox.com/u/80061077/Screenshots/c.png "Example of failing tests")
 
 ## Example rack application
 
