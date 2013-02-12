@@ -56,4 +56,8 @@ Have a look at a simple sinatra application that demonstrates rack-padlock at ht
 
 Rack-Padlock starts your Rack app up with an SSL enabled webrick server.  It puts a custom middleware in front of your application that implements a CSP policy.  That policy requires the browser to notify us of any non SSL activity.  The custom middleware intercepts these notifications and logs them.  At the end of the run the rack-padlock test will either succeed or fail based on the presence of any policy violations.
 
+## Not perfect
+
+I have noticed that CSP doesn't check resources requested by Flash.  But google chrome will break the padlock when flash requests non-secure resources.
+
 [W3C CSP spec]: http://www.w3.org/TR/CSP/

@@ -75,7 +75,7 @@ module Rack
       report_uri = "#{host}/padlock_middleware/report"
       csp_header_names = %w(Content-Security-Policy-Report-Only X-Content-Security-Policy-Report-Only X-WebKit-CSP-Report-Only)
       csp_headers = {}
-      csp_header_names.each{|name| csp_headers[name] = "default-src https: 'unsafe-inline' 'unsafe-eval'; report-uri https://#{report_uri}"}
+      csp_header_names.each{|name| csp_headers[name] = "default-src https: data: 'unsafe-inline' 'unsafe-eval'; object-src 'none'; report-uri https://#{report_uri}"}
       csp_headers
     end
     
